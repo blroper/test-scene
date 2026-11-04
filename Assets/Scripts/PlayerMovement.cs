@@ -12,13 +12,14 @@ public class PlayerMovement : MonoBehaviour
     public float gravityModifier;
     public bool isOnGround = true;
     public bool gameOver = false;
-    private Animator playerAnim;
+    public Animator playerAnim;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         jumpAction.Enable();
+        duckAction.Enable();
         Physics.gravity *= gravityModifier;
         playerAnim = GetComponent<Animator>();
     }
