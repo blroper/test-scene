@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   target: {fileID: 852003829}
-  offset: {x: 116, y: 80, z: -200}
+  offset: {x: 165, y: 80, z: -200}
   smoothSpeed: 0.125
 --- !u!1 &410087039
 GameObject:
@@ -1273,7 +1273,7 @@ Transform:
   m_GameObject: {fileID: 852003825}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 314, y: -75.9, z: 711}
+  m_LocalPosition: {x: 314, y: -75.9, z: 834}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1997,7 +1997,7 @@ Transform:
   m_GameObject: {fileID: 1299083772}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1159, y: -101, z: 716}
+  m_LocalPosition: {x: 1749, y: -101, z: 784}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
