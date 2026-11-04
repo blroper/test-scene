@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThriftStore.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Dumpster.unity
+    guid: ff7b43b577b494a3687e5dc18b9d2349
+  - enabled: 1
+    path: Assets/Scenes/Street.unity
+    guid: a6048c12d6fb240b6b01d9223898f480
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
