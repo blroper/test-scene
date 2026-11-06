@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class MoveController : MonoBehaviour
 {
     public float speed = 5f;
     private Rigidbody rb;
