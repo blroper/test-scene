@@ -118,7 +118,8 @@ public class PlayerController : MonoBehaviour
         // A key press only lasts one frame, and FixedUpdate doesn't run on every frame.
         // Remembering the press here means FixedUpdate can't miss it.
         if (jumpAction.WasPressedThisFrame())
-            jumpQueued = true;
+            {jumpQueued = true;
+            randomnum = Random.Range(0f, 1f);}
 
         UpdateAnimator();
     }
@@ -189,6 +190,8 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
     }
 
+    public float randomnum;
+
     // Send the player's state to the Animator, if there is one
     void UpdateAnimator()
     {
@@ -196,7 +199,8 @@ public class PlayerController : MonoBehaviour
             return;
 
         animator.SetFloat("Speed", Mathf.Abs(moveX));
-        animator.SetBool("IsJumping", !isGrounded);
+        animator.SetBool("IsJumping", !isGrounded && randomnum < 0.5);
+        animator.SetBool("IsJumping2", !isGrounded && randomnum >= 0.5);
         animator.SetBool("IsDucking", isGrounded && duckAction.IsPressed());
     }
 
