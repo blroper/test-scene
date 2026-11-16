@@ -35,6 +35,9 @@ public class PlayerController : MonoBehaviour
     public Animator animator; // Optional. Found automatically if left empty.
     public Transform groundCheck; // An empty child object at the player's feet
     public LayerMask groundLayer; // The layer(s) the player can stand on
+    public AudioClip walkingsound;
+    public AudioClip jumpsound;
+    public AudioSource audiosource;
 
     [Header("Input")]
     public InputAction moveAction;
@@ -119,7 +122,10 @@ public class PlayerController : MonoBehaviour
         // Remembering the press here means FixedUpdate can't miss it.
         if (jumpAction.WasPressedThisFrame())
             {jumpQueued = true;
-            randomnum = Random.Range(0f, 1f);}
+            randomnum = Random.Range(0f, 1f);
+            audiosource.clip = jumpsound;
+            audiosource.PlayDelayed(1f);
+            }
 
         UpdateAnimator();
     }
