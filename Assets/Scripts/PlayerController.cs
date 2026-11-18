@@ -118,13 +118,18 @@ public class PlayerController : MonoBehaviour
     {
         moveX = moveAction.ReadValue<Vector2>().x;
 
+        // while (moveX > 0 && isGrounded == true){
+        //     audiosource.clip = walkingsound;
+        //     audiosource.Play();
+        // }
+
         // A key press only lasts one frame, and FixedUpdate doesn't run on every frame.
         // Remembering the press here means FixedUpdate can't miss it.
         if (jumpAction.WasPressedThisFrame())
             {jumpQueued = true;
             randomnum = Random.Range(0f, 1f);
             audiosource.clip = jumpsound;
-            audiosource.PlayDelayed(1f);
+            audiosource.PlayDelayed(1.1f);
             }
 
         UpdateAnimator();
