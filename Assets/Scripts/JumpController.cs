@@ -2,44 +2,55 @@ using UnityEngine;
 
 public class JumpController : MonoBehaviour
 {
-    [SerializeField] private float jumpForce = 300f;
+    [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private float gravity = 28f;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float groundCheckDistance = 0.15f;
 
-    private Rigidbody rb;
+    private BoxCollider2D boxCollider;
+    private Vector2 velocity;
     private bool isGrounded;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.mass = 1f;
-        rb.linearDamping = 0f;
-        rb.angularDamping = 0.05f;
-        Physics.gravity = new Vector3(0f, -50f, 0f);
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
         {
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            velocity.y = jumpForce;
             isGrounded = false;
         }
+
+        velocity.y -= gravity * Time.deltaTime;
+        transform.position += (Vector3)(velocity * Time.deltaTime);
+
+        CheckGround();
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void CheckGround()
     {
-        foreach (ContactPoint contact in collision.contacts)
+        if (boxCollider == null)
+            return;
+
+        float rayLength = boxCollider.bounds.extents.y + groundCheckDistance;
+        RaycastHit2D hit = Physics2D.Raycast(boxCollider.bounds.center, Vector2.down, rayLength, groundLayer);
+
+        if (hit.collider != null)
         {
-            if (Vector3.Dot(contact.normal, Vector3.up) > 0.5f)
+            if (velocity.y <= 0f)
             {
+                float groundY = hit.point.y + boxCollider.bounds.extents.y;
+                transform.position = new Vector3(transform.position.x, groundY, transform.position.z);
+                velocity.y = 0f;
                 isGrounded = true;
-                return;
             }
         }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        isGrounded = false;
+        else
+        {
+            isGrounded = false;
+        }
     }
 }
