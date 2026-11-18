@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: 136025459}
   - component: {fileID: 136025460}
   - component: {fileID: 136025461}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0035_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1933,6 +1933,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  walkingsound: {fileID: 0}
+  jumpsound: {fileID: 0}
+  audiosource: {fileID: 0}
   moveAction:
     m_Name: Move
     m_Type: 0
@@ -2027,6 +2030,7 @@ MonoBehaviour:
   lowJumpMultiplier: 3
   rememberGroundedFor: 0.1
   isGrounded: 0
+  isOnObstacle: 0
   randomnum: 0
 --- !u!95 &308196445
 Animator:
@@ -2638,7 +2642,7 @@ GameObject:
   - component: {fileID: 365642550}
   - component: {fileID: 365642551}
   - component: {fileID: 365642552}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0036_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3295,7 +3299,7 @@ GameObject:
   - component: {fileID: 502272212}
   - component: {fileID: 502272213}
   - component: {fileID: 502272214}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0035_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3715,7 +3719,7 @@ GameObject:
   - component: {fileID: 580253811}
   - component: {fileID: 580253812}
   - component: {fileID: 580253813}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0037_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4989,7 +4993,7 @@ GameObject:
   - component: {fileID: 973729409}
   - component: {fileID: 973729410}
   - component: {fileID: 973729411}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0038_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5448,7 +5452,7 @@ GameObject:
   - component: {fileID: 1005322979}
   - component: {fileID: 1005322980}
   - component: {fileID: 1005322981}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0038_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6150,7 +6154,7 @@ GameObject:
   - component: {fileID: 1161699612}
   - component: {fileID: 1161699613}
   - component: {fileID: 1161699614}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0035_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6661,7 +6665,7 @@ GameObject:
   - component: {fileID: 1249619097}
   - component: {fileID: 1249619098}
   - component: {fileID: 1249619099}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0036_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7136,7 +7140,7 @@ GameObject:
   - component: {fileID: 1303443731}
   - component: {fileID: 1303443732}
   - component: {fileID: 1303443733}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0036_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7429,7 +7433,7 @@ GameObject:
   - component: {fileID: 1324989361}
   - component: {fileID: 1324989362}
   - component: {fileID: 1324989363}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0035_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7881,7 +7885,7 @@ GameObject:
   - component: {fileID: 1408481367}
   - component: {fileID: 1408481368}
   - component: {fileID: 1408481369}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0038_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8285,7 +8289,7 @@ GameObject:
   - component: {fileID: 1439471143}
   - component: {fileID: 1439471144}
   - component: {fileID: 1439471145}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0037_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8634,7 +8638,7 @@ GameObject:
   - component: {fileID: 1476558364}
   - component: {fileID: 1476558365}
   - component: {fileID: 1476558366}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0038_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8947,7 +8951,7 @@ GameObject:
   - component: {fileID: 1486336815}
   - component: {fileID: 1486336816}
   - component: {fileID: 1486336817}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0037_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9509,7 +9513,7 @@ GameObject:
   - component: {fileID: 1527389702}
   - component: {fileID: 1527389703}
   - component: {fileID: 1527389704}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0038_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9913,7 +9917,7 @@ GameObject:
   - component: {fileID: 1610174712}
   - component: {fileID: 1610174713}
   - component: {fileID: 1610174714}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0036_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10419,7 +10423,7 @@ GameObject:
   - component: {fileID: 1654809632}
   - component: {fileID: 1654809633}
   - component: {fileID: 1654809634}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0037_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10768,7 +10772,7 @@ GameObject:
   - component: {fileID: 1662585947}
   - component: {fileID: 1662585948}
   - component: {fileID: 1662585949}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0035_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11188,7 +11192,7 @@ GameObject:
   - component: {fileID: 1684970078}
   - component: {fileID: 1684970079}
   - component: {fileID: 1684970080}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0036_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12028,7 +12032,7 @@ GameObject:
   - component: {fileID: 1764538526}
   - component: {fileID: 1764538527}
   - component: {fileID: 1764538528}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0037_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13064,7 +13068,7 @@ GameObject:
   - component: {fileID: 1922513717}
   - component: {fileID: 1922513718}
   - component: {fileID: 1922513719}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0037_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13413,7 +13417,7 @@ GameObject:
   - component: {fileID: 1969654001}
   - component: {fileID: 1969654002}
   - component: {fileID: 1969654003}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0038_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13991,7 +13995,7 @@ GameObject:
   - component: {fileID: 2088516389}
   - component: {fileID: 2088516390}
   - component: {fileID: 2088516391}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0036_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14284,7 +14288,7 @@ GameObject:
   - component: {fileID: 2121465296}
   - component: {fileID: 2121465297}
   - component: {fileID: 2121465298}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IMG_0035_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

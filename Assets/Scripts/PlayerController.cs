@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Status (for checking, not for editing)")]
     public bool isGrounded; // Is the player standing on the ground right now?
+    public bool isOnObstacle;
 
     const float groundCheckRadius = .2f; // Size of the circle used to look for ground
 
@@ -140,6 +141,7 @@ public class PlayerController : MonoBehaviour
     {
         // Look for ground in a small circle at the player's feet
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
         if (isGrounded)
             lastTimeGrounded = Time.time;
 
